@@ -1,11 +1,15 @@
 describe('Login Test using cypress session',() => {
-    beforeEach(() => {
+
+    const login = () => {
         cy.session('login',() => {
-            cy.visit('https://demowebshop.tricentis.com/')
+            cy.visit('/')
             cy.contains('Log in').click()
             cy.login('debasis@gmail.com','test@123')
         })
-        cy.visit('https://demowebshop.tricentis.com/')
+    }
+    beforeEach(() => {
+        login()
+        cy.visit('/')
     })
 
     it('Get Title after login',() => {

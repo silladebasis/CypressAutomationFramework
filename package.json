@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:testOnEnv" : "npx cypress run --spec cypress/e2e/TC05_LoginSessionTest.cy.js --env type='staging'"
   },
   "author": "",
   "license": "ISC",
